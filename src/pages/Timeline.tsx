@@ -16,17 +16,17 @@ import { ActivityItem } from "@/components/ui/activity-item";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-// Mock data
+// Mock data with real image URLs for avatars
 const activities = [
   {
     id: "1",
     user: {
       name: "Jordan Smith",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=150&h=150&fit=crop"
     },
     action: "joined",
     target: {
-      type: 'club' as const,  // Using 'as const' to ensure this is the literal type 'club'
+      type: 'club' as const,
       name: "Coding Society",
       id: "2"
     },
@@ -36,11 +36,11 @@ const activities = [
     id: "2",
     user: {
       name: "Alex Johnson",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop"
     },
     action: "is attending",
     target: {
-      type: 'event' as const,  // Using 'as const' to ensure this is the literal type 'event'
+      type: 'event' as const,
       name: "Campus Tech Fair",
       id: "1"
     },
@@ -50,11 +50,11 @@ const activities = [
     id: "3",
     user: {
       name: "Sam Williams",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=150&h=150&fit=crop"
     },
     action: "posted in",
     target: {
-      type: 'club' as const,  // Using 'as const' to ensure this is the literal type 'club'
+      type: 'club' as const,
       name: "Photography Club",
       id: "1"
     },
@@ -64,11 +64,11 @@ const activities = [
     id: "4",
     user: {
       name: "Taylor Garcia",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop"
     },
     action: "created",
     target: {
-      type: 'event' as const,  // Using 'as const' to ensure this is the literal type 'event'
+      type: 'event' as const,
       name: "Film Screening Night",
       id: "4"
     },
@@ -78,11 +78,11 @@ const activities = [
     id: "5",
     user: {
       name: "Jordan Smith",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=150&h=150&fit=crop"
     },
     action: "commented on",
     target: {
-      type: 'event' as const,  // Using 'as const' to ensure this is the literal type 'event'
+      type: 'event' as const,
       name: "Spring Music Festival",
       id: "2"
     },
@@ -92,11 +92,11 @@ const activities = [
     id: "6",
     user: {
       name: "Avery Martinez",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop"
     },
     action: "joined",
     target: {
-      type: 'club' as const,  // Using 'as const' to ensure this is the literal type 'club'
+      type: 'club' as const,
       name: "Environmental Club",
       id: "5"
     },
@@ -106,11 +106,11 @@ const activities = [
     id: "7",
     user: {
       name: "Riley Wilson",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=150&h=150&fit=crop"
     },
     action: "is attending",
     target: {
-      type: 'event' as const,  // Using 'as const' to ensure this is the literal type 'event'
+      type: 'event' as const,
       name: "Career Workshop",
       id: "3"
     },

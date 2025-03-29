@@ -23,7 +23,7 @@ export function ActivityItem({ user, action, target, timestamp }: ActivityItemPr
     <div className="flex items-start gap-3 py-3 border-b last:border-0">
       <Avatar className="h-8 w-8">
         <AvatarImage src={user.avatar} alt={user.name} />
-        <AvatarFallback>{user.name[0]}</AvatarFallback>
+        <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
       </Avatar>
       <div className="flex-1 space-y-1">
         <p className="text-sm">
