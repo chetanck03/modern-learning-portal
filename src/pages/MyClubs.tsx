@@ -8,6 +8,35 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
+// Mock active members data
+const activeMembers = [
+  { 
+    id: 1, 
+    name: "Alex Johnson",
+    avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=150&h=150&fit=crop"
+  },
+  { 
+    id: 2, 
+    name: "Sam Williams",
+    avatar: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop"
+  },
+  { 
+    id: 3, 
+    name: "Taylor Garcia",
+    avatar: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=150&h=150&fit=crop"
+  },
+  { 
+    id: 4, 
+    name: "Jordan Smith",
+    avatar: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=150&h=150&fit=crop"
+  },
+  { 
+    id: 5, 
+    name: "Riley Wilson",
+    avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=150&h=150&fit=crop"
+  }
+];
+
 // Mock data
 const enrolledClubs = [
   {
@@ -21,7 +50,8 @@ const enrolledClubs = [
     nextEvent: {
       title: "Code Challenge Night",
       date: "Mar 18, 2024 • 7:00 PM"
-    }
+    },
+    activeMembers: activeMembers.slice(0, 5)
   },
   {
     id: "5",
@@ -34,7 +64,8 @@ const enrolledClubs = [
     nextEvent: {
       title: "Campus Cleanup Day",
       date: "Mar 25, 2024 • 9:00 AM"
-    }
+    },
+    activeMembers: activeMembers.slice(1, 6)
   }
 ];
 
@@ -77,15 +108,17 @@ const ClubDetailCard = ({ club }: { club: typeof enrolledClubs[0] }) => {
         <div className="mt-4">
           <h4 className="text-sm font-medium mb-2">Active Members</h4>
           <div className="flex -space-x-2">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <Avatar key={i} className="h-8 w-8 border-2 border-background">
-                <AvatarImage src={`/placeholder.svg?${i}`} />
-                <AvatarFallback>M{i}</AvatarFallback>
+            {club.activeMembers.map((member) => (
+              <Avatar key={member.id} className="h-8 w-8 border-2 border-background">
+                <AvatarImage src={member.avatar} alt={member.name} />
+                <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
               </Avatar>
             ))}
-            <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center text-xs font-medium">
-              +{club.members - 5}
-            </div>
+            {club.members > 5 && (
+              <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center text-xs font-medium border-2 border-background">
+                +{club.members - 5}
+              </div>
+            )}
           </div>
         </div>
       </CardContent>

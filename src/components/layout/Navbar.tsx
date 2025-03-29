@@ -26,10 +26,10 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2">
               <div className="h-8 w-8 rounded-md campus-gradient flex items-center justify-center">
-                <span className="text-white font-bold text-lg">C</span>
+                <span className="text-white font-bold text-lg">P</span>
               </div>
               <span className="text-xl font-bold text-campus-blue hidden sm:block">
-                CampusConnect
+                Plore
               </span>
             </Link>
           </div>
