@@ -25,7 +25,7 @@ const activities = [
     },
     action: "joined",
     target: {
-      type: 'club',
+      type: 'club' as const,  // Using 'as const' to ensure this is the literal type 'club'
       name: "Coding Society",
       id: "2"
     },
@@ -39,7 +39,7 @@ const activities = [
     },
     action: "is attending",
     target: {
-      type: 'event',
+      type: 'event' as const,  // Using 'as const' to ensure this is the literal type 'event'
       name: "Campus Tech Fair",
       id: "1"
     },
@@ -53,7 +53,7 @@ const activities = [
     },
     action: "posted in",
     target: {
-      type: 'club',
+      type: 'club' as const,  // Using 'as const' to ensure this is the literal type 'club'
       name: "Photography Club",
       id: "1"
     },
@@ -67,7 +67,7 @@ const activities = [
     },
     action: "created",
     target: {
-      type: 'event',
+      type: 'event' as const,  // Using 'as const' to ensure this is the literal type 'event'
       name: "Film Screening Night",
       id: "4"
     },
@@ -81,7 +81,7 @@ const activities = [
     },
     action: "commented on",
     target: {
-      type: 'event',
+      type: 'event' as const,  // Using 'as const' to ensure this is the literal type 'event'
       name: "Spring Music Festival",
       id: "2"
     },
@@ -95,7 +95,7 @@ const activities = [
     },
     action: "joined",
     target: {
-      type: 'club',
+      type: 'club' as const,  // Using 'as const' to ensure this is the literal type 'club'
       name: "Environmental Club",
       id: "5"
     },
@@ -109,7 +109,7 @@ const activities = [
     },
     action: "is attending",
     target: {
-      type: 'event',
+      type: 'event' as const,  // Using 'as const' to ensure this is the literal type 'event'
       name: "Career Workshop",
       id: "3"
     },
