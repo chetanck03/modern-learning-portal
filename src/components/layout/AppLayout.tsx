@@ -13,8 +13,10 @@ const AppLayout = ({ children }: AppLayoutProps) => {
     <div className="min-h-screen flex flex-col bg-campus-gray/30">
       <Navbar />
       <div className="flex flex-1">
-        <Sidebar />
-        <main className="flex-1 p-4 md:p-8 pb-20 md:pb-8 overflow-auto">
+        <div className="hidden md:block fixed h-[calc(100vh-4rem)] top-16 left-0 w-64">
+          <Sidebar />
+        </div>
+        <main className="flex-1 p-4 md:p-8 pb-20 md:pb-8 overflow-auto md:ml-64">
           {children}
         </main>
       </div>

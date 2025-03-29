@@ -40,7 +40,7 @@ const Sidebar = () => {
   const location = useLocation();
   
   return (
-    <aside className="hidden md:flex flex-col h-[calc(100vh-4rem)] border-r bg-white w-64 flex-shrink-0">
+    <div className="flex flex-col h-full border-r bg-white w-full">
       <div className="p-4">
         <Link to="/events/new">
           <Button className="w-full gap-2">
@@ -96,7 +96,7 @@ const Sidebar = () => {
           </Button>
         </div>
       </div>
-    </aside>
+    </div>
   );
 };
 

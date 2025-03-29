@@ -14,6 +14,7 @@ import {
 import { PageHeader } from "@/components/ui/page-header";
 import { ActivityItem } from "@/components/ui/activity-item";
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 // Mock data
 const activities = [
